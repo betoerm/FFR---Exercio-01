@@ -1,25 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './bootstrap.css';
+import { SidebarComponent } from './components/SidebarComponent';
+import { NavbarComponent } from './components/NavbarComponent';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <NavbarComponent 
+      title="NAV"
+      items={['Topic 01', 'Topic 02']}
+    />  
   );
 }
 
