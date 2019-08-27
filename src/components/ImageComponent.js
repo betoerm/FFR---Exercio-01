@@ -12,7 +12,7 @@ export class ImageComponent extends Component{
   render() {
     return (
       <div className="gallery">
-        <div className="images">
+        <div className="img-thumbnail">
           {this.props.imageUrls.map(imageUrl => this.renderImage(imageUrl))}
         </div>
       </div>

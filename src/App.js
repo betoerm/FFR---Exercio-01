@@ -1,11 +1,12 @@
 import React from 'react';
 //import logo from './logo.svg';
 import './bootstrap.css';
-import { SidebarComponent } from './components/SidebarComponent';
+import { NavComponent } from './components/NavComponent';
 import { NavbarComponent } from './components/NavbarComponent';
 import { SearchComponent } from './components/SearchComponent';
 import { ImageComponent } from './components/ImageComponent';
 import { CardTextComponent } from './components/CardTextComponent';
+import { NavVerticalComponent } from './components/NavVerticalComponent';
 
 var images = [
   "/react-image-gallery/img/cat1.jpg",
@@ -16,25 +17,44 @@ var images = [
 function App() {
   return (
   <div>
-    <NavbarComponent 
-      title="NAV"
-      items={['Topic 01', 'Topic 02']}
-    />
+    <div className="row">
+      <NavbarComponent 
+        title="NAV"
+        items={['Topic 01', 'Topic 02', 'Topic 03', 'Topic 04']}
+      />
+      <SearchComponent/>
+    </div>
 
-    <SearchComponent/>
-
-    <SidebarComponent
+    <NavComponent
       title="teste"
-      items={['Teste 01', 'Teste 02']}
+      items={['Section 01', 'Section 02', 'Section 03', 'Section 04' ]}
     />
 
-    <ImageComponent 
-      imageUrls={images}
-    />
+    <div className="row">
+      <div class="col-sm">
+        <ImageComponent 
+          imageUrls={images}
+        />
+      </div>
 
-    <CardTextComponent
-      item={'Hello World'}
-    />
+      <div class="col-sm">
+        <CardTextComponent
+          item={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida lacus et magna viverra, eleifend mattis massa feugiat. Maecenas laoreet, libero sed posuere scelerisque, neque augue vehicula nunc, eu congue erat felis malesuada elit.'}
+        />
+        <CardTextComponent
+          item={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida lacus et magna viverra, eleifend mattis massa feugiat. Maecenas laoreet, libero sed posuere scelerisque, neque augue vehicula nunc, eu congue erat felis malesuada elit.'}
+        />
+        <CardTextComponent
+          item={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida lacus et magna viverra, eleifend mattis massa feugiat. Maecenas laoreet, libero sed posuere scelerisque, neque augue vehicula nunc, eu congue erat felis malesuada elit.'}
+        />
+    </div>
+    <div class="col-sm">
+      <NavVerticalComponent
+        items={['Section 01', 'Section 02', 'Section 03', 'Section 04' ]} 
+      />
+    </div>
+    </div>
+
 
   </div>     
   );
