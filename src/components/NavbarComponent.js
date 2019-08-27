@@ -12,8 +12,9 @@ export class NavbarComponent extends Component{
                             <li className="nav-item">{item}</li>
                         )
                     )}
-                </ul>
+                </ul>                
             </nav>
+            
         );
     }
 }
